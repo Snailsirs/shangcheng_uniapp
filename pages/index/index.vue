@@ -35,7 +35,7 @@
 		},
 		data() {
 			return {
-				swiperheight:500,
+				swiperheight:"",
 				tabIndex: 0,
 				newlist: [{
 						list: [{
@@ -120,7 +120,7 @@
 			uni.getSystemInfo({
 			    success:(res)=> {
 			        // console.log(res.windowHeight);
-					let height = res.windowHeight-uni.upx2px(100);
+					let height = res.windowHeight-uni.upx2px(-110);
 					this.swiperheight = height;
 			    }
 			});

@@ -39,10 +39,7 @@
 	/* 公共样式 */
 	@import './common/common.css';
 	
-	page{ 
-		background: #FFFFFF; 
-	}
-	::-webkit-scrollbar{
-		display: none;
+	page {
+		background-color: #f7f7f7;
 	}
 </style>
