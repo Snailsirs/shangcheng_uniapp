@@ -16,16 +16,16 @@
 					<view v-if="selected==i" class="shuxian u-f-ac"></view>{{p}}
 				</view>
 			</scroll-view>
-			<scroll-view class="bg-white u-f1" scroll-y style="height:calc(100vh - 200upx);">
-				<view v-for="(p,i) in goods" :key="i">
-					<view>{{types[i]}}</view>
-					<view>
-						<view v-for="(tp,ti) in p" :key="ti">
+			<scroll-view scroll-with-animation :scroll-into-view="'good-'+selected" class="bg-white u-f1" scroll-y style="height:calc(100vh - 200upx);">
+				<view :id="'good-'+i" v-for="(p,i) in goods" :key="i">
+					<view class="g-title text-bold text-black">{{types[i]}}</view>
+					<view class="u-f" style="text-align: center;">
+						<view class="u-f1" v-for="(tp,ti) in p" :key="ti">
 							<view>
-								<image style="width: 100upx;height: 100upx;" :src="tp.url" mode="aspectFit"></image>
+								<image style="width: 180upx;height: 180upx;" :src="tp.url" mode="aspectFit"></image>
 							</view>
 							<view>{{tp.name}}</view>
-							<view>{{tp.price}}</view>
+							<view style="font-size: 120%;color: red;font-weight: bold;">￥{{tp.price}}</view>
 						</view>
 					</view>
 				</view>
@@ -103,5 +103,10 @@
 		height: 40upx;
 		background-color: red;
 		left: 5upx;
+	}
+
+	.g-title {
+		font-size: 110%;
+		margin: 20upx;
 	}
 </style>

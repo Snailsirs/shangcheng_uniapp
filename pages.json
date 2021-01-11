@@ -34,13 +34,19 @@
 		}, {
 			"path": "pages/carts/carts",
 			"style": {
-				"enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": {
+						"titleText": "我的购物车"
+					}
+				}
 			}
 
 		}, {
 			"path": "pages/my/my",
 			"style": {
-				"enablePullDownRefresh": false
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 
 		},
@@ -48,7 +54,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"app-plus": {
-					"scrollIndicator":"none",
+					"scrollIndicator": "none",
 					"animationType": "none",
 					"titleNView": {
 						//搜索框
@@ -81,13 +87,22 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uniapp",
-		"navigationBarBackgroundColor": "#8DC63F",
+		"navigationBarBackgroundColor": "red",
 		"backgroundColor": "#F8F8F8"
+
 	},
 	//底部导航
 	"tabBar": {
